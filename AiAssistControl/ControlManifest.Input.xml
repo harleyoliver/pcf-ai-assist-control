@@ -29,6 +29,22 @@
       usage="input"
       required="false" />
 
+    <!-- Button label override -->
+    <property name="buttonLabel"
+      display-name-key="Button Label"
+      description-key="Label shown on the AI Assist button. Defaults to '✨ AI Assist' if left empty."
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+ 
+    <!-- Sample text pre-loaded into the field to demonstrate the control -->
+    <property name="sampleText"
+      display-name-key="Sample Text"
+      description-key="Optional example text pre-loaded into the field so users understand what the control does. Cleared as soon as the user starts typing."
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
     <!-- Anthropic API key — store in environment variable in production -->
     <property name="apiKey"
       display-name-key="API Key"

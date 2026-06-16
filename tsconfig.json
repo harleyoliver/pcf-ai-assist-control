@@ -5,6 +5,7 @@
 		"types": ["node", "powerapps-component-framework"],
 		"jsx": "react",
 		"strict": true,
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"ignoreDeprecations": "6.0"
 	}
 }
