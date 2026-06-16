@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <control namespace="HarleyOliver" constructor="AiAssistControl" version="1.0.0"
+    display-name-key="AI Assist Text Field"
+    description-key="A Power Apps PCF control that provides AI-powered text suggestions using Claude."
+    control-type="standard">
+
+    <!-- The current text value -->
+    <property name="value"
+      display-name-key="Value"
+      description-key="The text value of the field."
+      of-type="SingleLine.Text"
+      usage="bound"
+      required="true" />
+
+    <!-- Placeholder text -->
+    <property name="placeholder"
+      display-name-key="Placeholder"
+      description-key="Placeholder text shown when the field is empty."
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <!-- The AI prompt instruction — e.g. "Improve this text" or "Summarise this" -->
+    <property name="aiInstruction"
+      display-name-key="AI Instruction"
+      description-key="Instruction sent to the AI. E.g. 'Improve this text', 'Summarise this', 'Fix grammar'."
+      of-type="SingleLine.Text"
+      usage="input"
+      required="false" />
+
+    <!-- Anthropic API key — store in environment variable in production -->
+    <property name="apiKey"
+      display-name-key="API Key"
+      description-key="Your Anthropic API key. Use an environment variable in production."
+      of-type="SingleLine.Text"
+      usage="input"
+      required="true" />
+
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="components/AiAssistField.css" order="1" />
+    </resources>
+  </control>
+</manifest>

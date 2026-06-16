@@ -1,0 +1,11 @@
+node_modules/
+out/
+.pcftools/
+generated/
+*.zip
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db

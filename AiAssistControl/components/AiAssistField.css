@@ -1,0 +1,161 @@
+/* AiAssistField.css — scoped styles for the PCF AI Assist control */
+
+.ai-assist-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Input row ─────────────────────────────────────────────── */
+.ai-assist-field__input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.ai-assist-field__textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+  line-height: 1.5;
+  transition: border-color 0.15s;
+}
+
+.ai-assist-field__textarea:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.15);
+}
+
+.ai-assist-field__textarea:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* ── Trigger button ─────────────────────────────────────────── */
+.ai-assist-field__trigger-btn {
+  align-self: flex-end;
+  padding: 6px 14px;
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.ai-assist-field__trigger-btn:hover:not(:disabled) {
+  background: #106ebe;
+}
+
+.ai-assist-field__trigger-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.ai-assist-field__trigger-btn--loading {
+  background: #6b7280;
+}
+
+/* ── Suggestion card ────────────────────────────────────────── */
+.ai-assist-field__suggestion {
+  border: 1px solid #0078d4;
+  border-radius: 4px;
+  background: #f0f6ff;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-assist-field__suggestion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ai-assist-field__suggestion-label {
+  font-weight: 600;
+  color: #0078d4;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ai-assist-field__suggestion-hint {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.ai-assist-field__suggestion-text {
+  color: #111827;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.ai-assist-field__suggestion-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ai-assist-field__accept-btn {
+  padding: 5px 12px;
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.ai-assist-field__accept-btn:hover {
+  background: #106ebe;
+}
+
+.ai-assist-field__dismiss-btn {
+  padding: 5px 12px;
+  background: transparent;
+  color: #6b7280;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.ai-assist-field__dismiss-btn:hover {
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+/* ── Error state ────────────────────────────────────────────── */
+.ai-assist-field__error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid #fca5a5;
+  border-radius: 4px;
+  background: #fef2f2;
+  color: #b91c1c;
+  font-size: 13px;
+}
