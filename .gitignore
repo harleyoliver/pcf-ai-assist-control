@@ -6,6 +6,9 @@ generated/
 .env
 .env.local
 
+# Auto-generated local dev config — never commit
+AiAssistControl/localConfig.ts
+
 # OS
 .DS_Store
 Thumbs.db
